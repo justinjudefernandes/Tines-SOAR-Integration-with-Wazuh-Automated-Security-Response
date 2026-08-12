@@ -92,38 +92,53 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 
 📌 Refer to the below screenshots: (left to right)
 
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/ecb7c307-ce03-44ff-b163-b94617868b3e" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/fdf9397b-6904-493d-9efd-f73b4f2319d3" />
 
-4. Built AI-Assisted Threat Intelligence Enrichment
+### 4. Built AI-Assisted Threat Intelligence Enrichment
+- Added a Tines AI Task Agent to analyze incoming Wazuh alerts and enrich indicators using:
+  - AbuseIPDB – IP reputation
+  - VirusTotal – IPs, URLs, domains, files and comments
+  - Slack – SOC notification and communication
+- Configured the required API credentials and updated the AI Agent system instructions and prompt.
 
-Added a Tines AI Task Agent to analyze incoming Wazuh alerts and enrich indicators using:
+📌 Refer to the below screenshots: (left to right)
 
-AbuseIPDB – IP reputation
-VirusTotal – IPs, URLs, domains, files and comments
-Slack – SOC notification and communication
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/157d98e7-dbf6-4ecb-b2f4-9aabe32c4af6" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/ea880452-f177-4c2e-a83d-eaa98c8d54af" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/c03214a1-6c9d-432b-97e0-a783689867ce" />
+<img width="975" height="561" alt="image" src="https://github.com/user-attachments/assets/e701eeea-f906-4ca9-baf8-d96ce3971713" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/a75a0f4b-31c6-4030-b5a8-79744d09c9f6" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/08c25c70-f897-4efa-858b-b6730543cf95" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/41ea99fd-c420-48c4-a0d7-44cea60aea92" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/3456c0db-835f-471a-b9d1-3df97745735f" />
+<img width="975" height="521" alt="image" src="https://github.com/user-attachments/assets/d9d2f00a-f45a-43e6-8d76-0e0657b63e69" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/62718836-a579-40f0-a51b-9b0d604add58" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/7c91f402-9018-4f42-b3b8-3b6dee59942d" />
+<img width="975" height="582" alt="image" src="https://github.com/user-attachments/assets/aadcc2c8-c72d-4a66-bcc6-b2d5ed97ef53" />
+<img width="975" height="582" alt="image" src="https://github.com/user-attachments/assets/4873cb48-f5e5-4cd9-b6c6-60d058dae7dc" />
+<img width="975" height="561" alt="image" src="https://github.com/user-attachments/assets/f598ac8c-17b6-4b6d-a2a6-35100121e957" />
+<img width="975" height="532" alt="image" src="https://github.com/user-attachments/assets/d15cfedc-c6a1-4970-8480-acfb479d7785" />
+<img width="975" height="536" alt="image" src="https://github.com/user-attachments/assets/d0910dc5-3258-48bc-bba7-bc261a609bcf" />
+<img width="975" height="580" alt="image" src="https://github.com/user-attachments/assets/1093fdb6-44b5-4dce-8da6-46cf4d5c93dd" />
+<img width="975" height="562" alt="image" src="https://github.com/user-attachments/assets/2a203a65-eab3-48d4-9f2e-598d66dae0e1" />
+<img width="975" height="561" alt="image" src="https://github.com/user-attachments/assets/e7cf3ab3-3a1d-4fab-aa2f-b21a2dea9209" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/60435a7f-5975-44ce-a66d-ba925425ec75" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/72bceecb-283f-47d6-8a35-0e5aef4a53a1" />
+<img width="975" height="564" alt="image" src="https://github.com/user-attachments/assets/6682c807-f6b5-418d-91b1-ee99703712d9" />
+<img width="975" height="562" alt="image" src="https://github.com/user-attachments/assets/0f82b48e-a592-40b4-b8e9-7593da5592ae" />
+<img width="975" height="565" alt="image" src="https://github.com/user-attachments/assets/4fdce8d3-92f1-45a8-a538-1e9d1e735f00" />
+<img width="975" height="564" alt="image" src="https://github.com/user-attachments/assets/a596bb45-6ee5-48dd-a6a8-a65964e3559b" />
+<img width="975" height="563" alt="image" src="https://github.com/user-attachments/assets/1fe206f4-06da-474d-815e-cac8ac16926c" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/639f7f38-7897-420c-bc51-02e6204c093f" />
 
-Configured the required API credentials and updated the AI Agent system instructions and prompt.
+### 5. Implemented Slack SOC Notifications
+- Configured Slack integration within Tines and tested the connection using the appropriate channel ID.
+- Replayed a Wazuh event through the webhook and verified that Tines generated a Slack notification containing the relevant alert and enrichment information.
 
-📸 Screenshot – Tines AI Task Agent
+📌 Refer to the below screenshots: (left to right)
 
-[INSERT SCREENSHOT HERE]
 
-📸 Screenshot – AbuseIPDB / VirusTotal Configuration
-
-[INSERT SCREENSHOT HERE]
-
-5. Implemented Slack SOC Notifications
-
-Configured Slack integration within Tines and tested the connection using the appropriate channel ID.
-
-Replayed a Wazuh event through the webhook and verified that Tines generated a Slack notification containing the relevant alert and enrichment information.
-
-📸 Screenshot – Tines Slack Configuration
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – Wazuh Alert Notification in Slack
-
-[INSERT SCREENSHOT HERE]
 
 6. Created Analyst Approval Workflow
 
