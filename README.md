@@ -6,7 +6,7 @@ Integrate Wazuh with Tines SOAR to automate security alert processing, threat in
 ## 📊 Project Overview:
 This project focused on extending Wazuh's security monitoring capabilities through Tines SOAR. Since native Tines integration was not available, a custom Wazuh integration was configured using a custom integration script and webhook. Wazuh alerts were forwarded to Tines, enriched using AbuseIPDB and VirusTotal, and communicated through Slack. An analyst approval workflow was then implemented to allow or deny automated IP blocking through the Wazuh API.
 
-🧰 Tools Used:
+## 🧰 Tools Used:
 - Wazuh SIEM
 - Tines SOAR
 - Wazuh API
@@ -22,7 +22,7 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 - Wazuh Custom Integration
 - Wazuh Custom Rules
 
-🛡️ Skill Developed:
+## 🛡️ Skill Developed:
 - SOAR workflow design and orchestration
 - Security alert triage and enrichment
 - AI-assisted security analysis
@@ -34,7 +34,7 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 - Security decision-making and validation
 - Detection-to-response workflow development
 
-📁 Key Deliverables:
+## 📁 Key Deliverables:
 - Custom Tines-Wazuh integration
 - Wazuh-Tines webhook configuration
 - Tines SOC automation workflow
@@ -46,56 +46,52 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 - Automated Wazuh Active Response workflow
 - End-to-end IP blocking demonstration
 
-🔍 Steps Performed:
-1. Configured Custom Wazuh Integration
+## 🔍 Steps Performed:
 
-Verified that the deployed Wazuh version did not provide native Tines integration.
+### 1. Configured Custom Wazuh Integration
+- Verified that the deployed Wazuh version did not provide native Tines integration.
+- Created a custom integration based on the existing Wazuh integration structure by:
+  - Copying the shuffle integration.
+  - Renaming it to custom-tines.
+  - Renaming the associated Python script to custom-tines.py.
+  - Updating ownership to the 'wazuh' group.
+  - Configuring the integration to communicate with Tines through a webhook.
 
-Created a custom integration based on the existing Wazuh integration structure by:
+📌 Refer to the below screenshots: (left to right)
 
-Copying the shuffle integration.
-Renaming it to custom-tines.
-Renaming the associated Python script to custom-tines.py.
-Updating ownership to the wazuh group.
-Configuring the integration to communicate with Tines through a webhook.
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/171e9a69-b27a-4272-a815-d92baf71ed52" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/b8f3ee64-9c40-42cd-97a3-7eb592a456fa" />
+<img width="785" height="230" alt="image" src="https://github.com/user-attachments/assets/f3d20709-7591-4d9a-88a8-454e3b2342a5" />
 
-📸 Screenshot – Wazuh Custom Integration
+### 2. Created Tines Webhook & Workflow
+- Configured Tines by:
+  - Creating a Tines Stories tenant.
+  - Creating a dedicated team named 'Wazuh-SOC-Analyst-Challenge’ '
+  - Creating the Wazuh-Webhook.
+  - Copying the webhook URL.
+  - Configuring Wazuh to forward matching security events to Tines in JSON format.
+- Configured the Wazuh Manager to forward events matching the custom SSH brute-force detection rule.
 
-[INSERT SCREENSHOT HERE]
+📌 Refer to the below screenshots: (left to right)
 
-2. Created Tines Webhook & Workflow
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/663a29c6-d76c-4e0e-ba9e-7d6370a9939b" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/fb50b9ee-3b18-4fd7-a8ab-947b54cd83a3" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/cae127d1-c6f9-4d55-91f2-de7e22a5f301" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/dd8a566b-409d-4507-94e3-859178d38933" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/ac0afe6a-2b7c-4d1d-adf5-de8e4eb20b26" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/dfa52a1d-114b-4a5a-b8ff-50a695f75318" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/5a7bb697-697e-40b2-9664-3fcc01e9af90" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/809f88b8-0925-4606-a362-43133994250b" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/816731d6-7c84-47b9-8ec6-206c1b788533" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/81c4ab7b-59ea-4c9e-8bf3-0b09125e8fc9" />
 
-Configured Tines by:
+### 3. Validated Wazuh Alert Ingestion
+- Generated three failed SSH authentication attempts from the Windows endpoint against the Linux server.
+- The activity triggered the Wazuh custom rule: **'Multiple SSH login failures observed from the same source IP'**.
+- The resulting Wazuh alert was successfully received by the Tines webhook and appeared within the Tines Story.
 
-Creating a Tines Stories tenant.
-Creating a dedicated SOC team.
-Creating the Wazuh-Webhook.
-Copying the webhook URL.
-Configuring Wazuh to forward matching security events to Tines in JSON format.
+📌 Refer to the below screenshots: (left to right)
 
-Configured the Wazuh Manager to forward events matching the custom SSH brute-force detection rule.
-
-📸 Screenshot – Tines Wazuh Webhook
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – Wazuh Webhook Configuration
-
-[INSERT SCREENSHOT HERE]
-
-3. Validated Wazuh Alert Ingestion
-
-Generated three failed SSH authentication attempts from the Windows endpoint against the Linux server.
-
-The activity triggered the Wazuh custom rule:
-
-Multiple SSH login failures observed from the same source IP
-
-The resulting Wazuh alert was successfully received by the Tines webhook and appeared within the Tines Story.
-
-📸 Screenshot – Wazuh Alert in Tines
-
-[INSERT SCREENSHOT HERE]
 
 4. Built AI-Assisted Threat Intelligence Enrichment
 
