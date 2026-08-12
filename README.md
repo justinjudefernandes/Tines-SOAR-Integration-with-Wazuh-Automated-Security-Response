@@ -101,7 +101,7 @@ This project focused on extending Wazuh's security monitoring capabilities throu
   - VirusTotal – IPs, URLs, domains, files and comments
   - Slack – SOC notification and communication
 - Configured the required API credentials and updated the AI Agent system instructions and prompt.
-
+  
 📌 Refer to the below screenshots: (left to right)
 
 <img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/157d98e7-dbf6-4ecb-b2f4-9aabe32c4af6" />
@@ -131,6 +131,12 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 <img width="975" height="564" alt="image" src="https://github.com/user-attachments/assets/a596bb45-6ee5-48dd-a6a8-a65964e3559b" />
 <img width="975" height="563" alt="image" src="https://github.com/user-attachments/assets/1fe206f4-06da-474d-815e-cac8ac16926c" />
 <img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/639f7f38-7897-420c-bc51-02e6204c093f" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/41798bf7-1de0-4442-8cb6-b05a9d999f86" />
+<img width="975" height="563" alt="image" src="https://github.com/user-attachments/assets/225ea344-ecb5-4c47-bd81-a6211a4b32ce" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/b443a9a5-b1da-449c-acb2-d0d35f403f52" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/e18ac7ec-666c-487c-861d-7e0972485cf9" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/761f1a40-1c83-4daa-8d18-6e64ff736e5d" />
+
 
 ### 5. Implemented Slack SOC Notifications
 - Configured Slack integration within Tines and tested the connection using the appropriate channel ID.
@@ -138,83 +144,74 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 
 📌 Refer to the below screenshots: (left to right)
 
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/8cf7c9d1-2460-40f0-bc2d-f552c0270767" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/ef6eccba-67b0-42c5-b4f0-9be5b0b540a5" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/8a270815-f1fc-4c7c-aed2-d64667ace7b4" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/689cd762-3ab5-4ff4-a2b1-ff45cf209f33" />
+<img width="975" height="556" alt="image" src="https://github.com/user-attachments/assets/2a848660-e08f-4a1e-ad60-56c3962fef34" />
+
+### 6. Created Analyst Approval Workflow
+- Extended the workflow to determine whether an IP should be blocked.
+- The AI Agent was configured to provide structured output containing:
+  - recommend_block
+  - ioc_type
+  - ioc_value
+- Tines Event Transform actions were then used to extract these values from the AI output.
+- Created conditional branches for:
+  - Block is recommended
+  - Don't block
+
+📌 Refer to the below screenshots: (left to right)
+
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/688ca3f7-cf73-4e2a-ad67-0be2dc6f1793" />
+<img width="975" height="551" alt="image" src="https://github.com/user-attachments/assets/4c8bf7b2-8c52-4b15-897e-3fada8e9971d" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/a9387d10-9341-4b99-a445-4714aa2e3e1a" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/af29ca03-16e8-4072-8b42-92ec118f7d87" />
+<img width="975" height="564" alt="image" src="https://github.com/user-attachments/assets/7969d7f4-6f19-4e68-9459-dce9124f6602" />
+<img width="975" height="562" alt="image" src="https://github.com/user-attachments/assets/277b28b1-0638-4ea9-abdb-cb2976465d18" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/bf383213-43ee-40fd-bbd7-11bdd74f6673" />
+
+### 7. Built Analyst Decision Page
+- Created a Tines page to obtain analyst approval before executing the blocking action.
+- The page included interactive controls allowing the analyst to choose whether the identified IP should be blocked.
+- This introduced a human-in-the-loop approval step before automated containment.
+
+📌 Refer to the below screenshots: (left to right)
+
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/1611b1ed-1140-4d2e-8ef5-71a9a1be3eb6" />
+<img width="975" height="562" alt="image" src="https://github.com/user-attachments/assets/24b0397a-0d8b-42d0-b33b-3588c9391388" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/faba5896-05bf-445c-8177-81e8e5daaf5c" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/9066c6bf-b1ab-45e8-a9c1-8f6873fbd28c" />
+
+### 8. Tested the SOAR Workflow with a Simulated Alert
+- Generated a mock Wazuh security event containing suspicious process execution, PowerShell activity, MITRE ATT&CK techniques, and a destination IP.
+- Sent the event directly to the Tines webhook to validate the workflow independently of a live detection.
+- Setup up the Active response workflow by creating a condition named ‘Yes to Block’.
+- Verified that the event successfully passed through the workflow and generated the expected enrichment and response logic.
+
+📌 Refer to the below screenshots: (left to right)
+
+<img width="975" height="582" alt="image" src="https://github.com/user-attachments/assets/536e2e02-f9cb-4a59-aeb5-1d5f1d3f4fe4" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/884656e4-01ce-489f-a74e-4826caacd24c" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/d1e2c8c8-6747-471c-ba4b-4c876cb94613" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/7e4be330-a302-4b6a-875c-216db2cf024c" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/25dfb9b7-d5cd-4fe0-a27b-a547a7d0e2d7" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/4abf7df7-9c56-44b5-a9ef-26f278c31761" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/4fe43c4c-11d0-4a3e-a50d-67201370acb3" />
+
+### 9. Integrated Tines with the Wazuh API
+- Retrieved the Wazuh API credentials from the Wazuh Manager.
+- Because the Wazuh Manager was hosted on-premises, configured ngrok to provide secure external access to the Wazuh API.
+- Configured:
+  - Wazuh API endpoint
+  - Authentication credentials
+  - SSL verification settings
+  - API authentication token extraction
+- Successfully tested the Wazuh API connection from Tines.
+
+📌 Refer to the below screenshots: (left to right)
 
 
-6. Created Analyst Approval Workflow
-
-Extended the workflow to determine whether an IP should be blocked.
-
-The AI Agent was configured to provide structured output containing:
-
-recommend_block
-ioc_type
-ioc_value
-
-Tines Event Transform actions were then used to extract these values from the AI output.
-
-Created conditional branches for:
-
-Block is recommended
-Don't block
-
-📸 Screenshot – Tines Conditional Workflow
-
-[INSERT SCREENSHOT HERE]
-
-7. Built Analyst Decision Page
-
-Created a Tines page to obtain analyst approval before executing the blocking action.
-
-The page included interactive controls allowing the analyst to choose whether the identified IP should be blocked.
-
-This introduced a human-in-the-loop approval step before automated containment.
-
-📸 Screenshot – Analyst Approval Page
-
-[INSERT SCREENSHOT HERE]
-
-8. Tested the SOAR Workflow with a Simulated Alert
-
-Generated a mock Wazuh security event containing suspicious process execution, PowerShell activity, MITRE ATT&CK techniques, and a destination IP.
-
-Sent the event directly to the Tines webhook to validate the workflow independently of a live detection.
-
-Verified that the event successfully passed through the workflow and generated the expected enrichment and response logic.
-
-📸 Screenshot – Mock Wazuh Event
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – Tines Workflow Execution
-
-[INSERT SCREENSHOT HERE]
-
-9. Integrated Tines with the Wazuh API
-
-Retrieved the Wazuh API credentials from the Wazuh Manager.
-
-Because the Wazuh Manager was hosted on-premises, configured ngrok to provide secure external access to the Wazuh API.
-
-Configured:
-
-Wazuh API endpoint
-Authentication credentials
-SSL verification settings
-API authentication token extraction
-
-Successfully tested the Wazuh API connection from Tines.
-
-📸 Screenshot – ngrok Configuration
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – Wazuh API Credentials in Tines
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – Successful Wazuh API Authentication
-
-[INSERT SCREENSHOT HERE]
 
 10. Connected Tines to Wazuh Active Response
 
