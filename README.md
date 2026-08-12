@@ -211,19 +211,48 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 
 📌 Refer to the below screenshots: (left to right)
 
+<img width="975" height="582" alt="image" src="https://github.com/user-attachments/assets/c425376a-b9fa-4130-a326-7a7ffb10a6b0" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/10ac0f6b-1cef-4db2-babe-68dab6f61715" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/77ef0b0a-6aec-4670-bb72-322517d92b70" />
+<img width="975" height="556" alt="image" src="https://github.com/user-attachments/assets/f35f4457-b332-4d0e-a5e6-a525ef5050af" />
+<img width="975" height="578" alt="image" src="https://github.com/user-attachments/assets/4abb0919-23d3-4315-a21d-a93dedd0494b" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/57ca6906-9ba7-4e74-b47b-39e3c6d85bdc" />
+<img width="975" height="582" alt="image" src="https://github.com/user-attachments/assets/b0c54ced-96d1-4176-89a2-d92f2f2f325c" />
+<img width="975" height="579" alt="image" src="https://github.com/user-attachments/assets/0cf7181d-41e5-4935-abf5-a9f23d020749" />
+<img width="975" height="583" alt="image" src="https://github.com/user-attachments/assets/14f83eb7-91e5-4dda-99c4-3f54f5bed832" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/7dec8a1a-34ae-467a-a634-24dcd3c17fc5" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/cbed33fd-f10e-40d4-bcc0-4e782d30a6d2" />
+<img width="975" height="562" alt="image" src="https://github.com/user-attachments/assets/e8aa7a0d-d58c-4145-aa3e-78a7699fad45" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/54a38a78-dddc-4c81-b94c-d41f7b753604" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/df7a7128-d79a-4f69-9a24-9273a83eb1ef" />
+<img width="975" height="556" alt="image" src="https://github.com/user-attachments/assets/547cd1b2-972f-4199-a9ed-9f464c8db1f8" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/618954f4-5cfd-4ac1-9c09-b872a0ffba12" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/8fc8b128-9a13-4678-a544-a910174db77f" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/4c0405f0-beca-436b-a4b9-a27681f53444" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/06628358-67e3-4f77-8774-d35caa457795" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/c87e2181-3dd6-4efe-9ce7-c568c0242ef6" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/4f58184b-57ca-4d13-9d98-a662db2340bb" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/d9af06f8-5c98-4a14-a5d2-b6f42f367a03" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/2a26a5ef-7a27-44e4-bdd4-2720df9dd08c" />
+
+### 10. Connected Tines to Wazuh Active Response
+- Configured the Tines Run Command in Wazuh functionality to communicate with the Wazuh API.
+- Updated the AI Agent and Slack notification components to support the automated response workflow.
+- The workflow was designed to execute Wazuh Active Response only after the appropriate condition and analyst approval were satisfied.
+
+📌 Refer to the below screenshots: (left to right)
+
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/271431ae-b16c-4f4f-91f6-e5b41e881962" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/05fe4bfd-36e4-4a6e-ba31-b5eb8c1f9968" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/8f9ac921-761e-4407-9c0d-c3f52f52a594" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/14836560-4274-4772-924b-18924701b5fd" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/5802d4d4-8ab0-4aa1-bade-d0a68dc269ae" />
 
 
-10. Connected Tines to Wazuh Active Response
 
-Configured the Tines Run Command in Wazuh functionality to communicate with the Wazuh API.
 
-Updated the AI Agent and Slack notification components to support the automated response workflow.
 
-The workflow was designed to execute Wazuh Active Response only after the appropriate condition and analyst approval were satisfied.
 
-📸 Screenshot – Tines Wazuh Active Response Configuration
-
-[INSERT SCREENSHOT HERE]
 
 11. Validated End-to-End Automated Response
 
