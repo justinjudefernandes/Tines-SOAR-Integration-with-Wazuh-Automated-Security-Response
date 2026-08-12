@@ -66,7 +66,7 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 ### 2. Created Tines Webhook & Workflow
 - Configured Tines by:
   - Creating a Tines Stories tenant.
-  - Creating a dedicated team named 'Wazuh-SOC-Analyst-Challenge’ '
+  - Creating a dedicated team named 'Wazuh-SOC-Analyst-Challenge’.
   - Creating the Wazuh-Webhook.
   - Copying the webhook URL.
   - Configuring Wazuh to forward matching security events to Tines in JSON format.
