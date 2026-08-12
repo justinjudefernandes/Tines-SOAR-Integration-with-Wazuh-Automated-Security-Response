@@ -268,6 +268,7 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 - After selecting Yes to block the malicious IP, Tines triggered Wazuh Active Response and the source IP was successfully blocked at the firewall.
 
 📌 Refer to the below screenshots: (left to right)
+
 <img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/cd7c178c-9053-4c64-bfd0-91e61b479ef4" />
 <img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/98056f58-4ea5-454f-95f5-4daf0ead605d" />
 <img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/0eab46d6-e0f0-4fe5-96cf-7c14b1c8b27c" />
