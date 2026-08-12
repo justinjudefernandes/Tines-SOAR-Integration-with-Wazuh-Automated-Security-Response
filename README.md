@@ -7,50 +7,44 @@ Integrate Wazuh with Tines SOAR to automate security alert processing, threat in
 This project focused on extending Wazuh's security monitoring capabilities through Tines SOAR. Since native Tines integration was not available, a custom Wazuh integration was configured using a custom integration script and webhook. Wazuh alerts were forwarded to Tines, enriched using AbuseIPDB and VirusTotal, and communicated through Slack. An analyst approval workflow was then implemented to allow or deny automated IP blocking through the Wazuh API.
 
 🧰 Tools Used:
-Wazuh SIEM/XDR
-Tines SOAR
-Wazuh API
-Wazuh Active Response
-AbuseIPDB
-VirusTotal
-Slack
-ngrok
-Windows 10
-Ubuntu Linux
-SSH
-Python
-Wazuh Custom Integration
-Wazuh Custom Rules
+- Wazuh SIEM
+- Tines SOAR
+- Wazuh API
+- Wazuh Active Response
+- AbuseIPDB
+- VirusTotal
+- Slack
+- ngrok
+- Windows 10
+- Ubuntu Linux
+- SSH
+- Python
+- Wazuh Custom Integration
+- Wazuh Custom Rules
 
 🛡️ Skill Developed:
-SOAR integration
-Wazuh-Tines integration
-Security workflow automation
-Alert ingestion via webhook
-Threat intelligence enrichment
-IOC investigation
-AbuseIPDB and VirusTotal integration
-Slack security notifications
-AI-assisted alert analysis
-Analyst approval workflows
-Wazuh API integration
-Automated incident response
-Firewall-based IP blocking
-On-premises API exposure and connectivity
-Detection-to-response orchestration
+- SOAR workflow design and orchestration
+- Security alert triage and enrichment
+- AI-assisted security analysis
+- Human-in-the-loop response design
+- Threat intelligence investigation
+- API-based security automation
+- Webhook-based integration
+- Incident response automation
+- Security decision-making and validation
+- Detection-to-response workflow development
 
 📁 Key Deliverables:
-Custom Wazuh-to-Tines integration
-Wazuh webhook alert ingestion
-Automated threat intelligence enrichment workflow
-AbuseIPDB integration
-VirusTotal integration
-Slack alert notification
-AI-assisted security analysis
-Analyst approval interface for IP blocking
-Tines-to-Wazuh API integration
-Automated Wazuh Active Response workflow
-End-to-end brute-force detection and response workflow
+- Custom Tines-Wazuh integration
+- Wazuh-Tines webhook configuration
+- Tines SOC automation workflow
+- AbuseIPDB and VirusTotal enrichment workflow
+- Slack notification workflow
+- AI Task Agent with structured IOC analysis
+- Analyst approval page with block/allow decision
+- Tines-Wazuh API connectivity
+- Automated Wazuh Active Response workflow
+- End-to-end IP blocking demonstration
 
 🔍 Steps Performed:
 1. Configured Custom Wazuh Integration
