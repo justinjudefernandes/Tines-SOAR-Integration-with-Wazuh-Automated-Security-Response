@@ -247,35 +247,26 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 <img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/8f9ac921-761e-4407-9c0d-c3f52f52a594" />
 <img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/14836560-4274-4772-924b-18924701b5fd" />
 <img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/5802d4d4-8ab0-4aa1-bade-d0a68dc269ae" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/2471f568-942e-4ce5-b807-582c377ce30d" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/bb3dbfcc-a9ec-4d8f-882d-cf685397fd22" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/9824d94b-a0e1-4e98-b36f-472be8518277" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/fb9ccd0b-e8e8-48aa-bc33-738419af79b0" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/f6335454-a3bc-4491-990e-8efa3b662c06" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/e83d3fe9-75a2-40a0-b554-f19f2f868500" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/a453a1a2-8c90-4adf-8825-155610f7f334" />
+<img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/c8e295f3-2346-41be-a871-8c95d534f185" />
+<img width="975" height="559" alt="image" src="https://github.com/user-attachments/assets/8ff1ae9b-f224-4723-a107-6bc42163149b" />
+
+### 11. Validated End-to-End Automated Response
+- Generated another SSH brute-force scenario from the Windows endpoint against the Linux server.
+- The workflow successfully performed:
+  - SSH Brute Force → Wazuh Detection → Tines Webhook → AI Analysis → Threat Intelligence Enrichment → Analyst Approval → Wazuh API → Active Response → IP Blocking
+- After selecting Yes to block the malicious IP, Tines triggered Wazuh Active Response and the source IP was successfully blocked at the firewall.
+
+📌 Refer to the below screenshots: (left to right)
+<img width="975" height="572" alt="image" src="https://github.com/user-attachments/assets/cd7c178c-9053-4c64-bfd0-91e61b479ef4" />
+<img width="975" height="557" alt="image" src="https://github.com/user-attachments/assets/98056f58-4ea5-454f-95f5-4daf0ead605d" />
+<img width="975" height="560" alt="image" src="https://github.com/user-attachments/assets/0eab46d6-e0f0-4fe5-96cf-7c14b1c8b27c" />
+<img width="975" height="579" alt="image" src="https://github.com/user-attachments/assets/de83058d-c66b-4185-95f3-7ddf6afe5cac" />
 
 
-
-
-
-
-
-11. Validated End-to-End Automated Response
-
-Generated another SSH brute-force scenario from the Windows endpoint against the Linux server.
-
-The workflow successfully performed:
-
-SSH Brute Force → Wazuh Detection → Tines Webhook → AI Analysis → Threat Intelligence Enrichment → Analyst Approval → Wazuh API → Active Response → IP Blocking
-
-After selecting Yes to block the malicious IP, Tines triggered Wazuh Active Response and the source IP was successfully blocked at the firewall.
-
-📸 Screenshot – Brute Force Detection
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – Tines Analyst Approval
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – Active Response Execution
-
-[INSERT SCREENSHOT HERE]
-
-📸 Screenshot – IP Blocked at Firewall
-
-[INSERT SCREENSHOT HERE]
