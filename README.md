@@ -69,13 +69,12 @@ This project focused on extending Wazuh's security monitoring capabilities throu
   - Creating a dedicated team named 'Wazuh-SOC-Analyst-Challenge’.
   - Creating the Wazuh-Webhook.
   - Copying the webhook URL.
-  - Configuring Wazuh to forward matching security events to Tines in JSON format.
-- Configured the Wazuh Manager to forward events matching the custom SSH brute-force detection rule.
+- Configured the Wazuh Manager to forward events matching the custom SSH brute-force detection rule:
+  - Forward matching security events to Tines in JSON format.
   - Added the rule id for ‘Multiple SSH login failures observed from the same source IP’.
   - Obtained this id from the Wazuh Manager Custom rules.
   - Disabled ‘active-response’ for the firewall-drop on rule id 100101.
   - Confirmed that there was no active response enabled using the command: /var/ossec/bin/agent_control -L
-
 
 📌 Refer to the below screenshots: (left to right)
 
