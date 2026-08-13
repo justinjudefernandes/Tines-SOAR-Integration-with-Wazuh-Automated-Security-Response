@@ -22,7 +22,7 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 - Wazuh Custom Integration
 - Wazuh Custom Rules
 
-## 🛡️ Skill Developed:
+## 🛠️ Capabilities Demonstrated:
 - SOAR workflow design and orchestration
 - Security alert triage and enrichment
 - AI-assisted security analysis
