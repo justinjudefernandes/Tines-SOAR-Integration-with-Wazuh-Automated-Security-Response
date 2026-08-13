@@ -1,10 +1,10 @@
 # Tines SOAR Integration with Wazuh & Automated Security Response
 
 ## 🎯 Objective:
-Integrate Wazuh with Tines SOAR to automate security alert processing, threat intelligence enrichment, analyst notification, and controlled response actions. The objective was to build an end-to-end workflow that detects suspicious activity, enriches indicators, obtains analyst approval, and triggers Wazuh Active Response.
+Integrate Wazuh with Tines SOAR to automate security alert processing, threat intelligence enrichment, analyst notification, decision workflows, and controlled response actions. The implementation establishes an end-to-end detection-to-response workflow using Wazuh alerts, external intelligence, analyst approval, and API-driven containment.
 
 ## 📊 Project Overview:
-This project focused on extending Wazuh's security monitoring capabilities through Tines SOAR. Since native Tines integration was not available, a custom Wazuh integration was configured using a custom integration script and webhook. Wazuh alerts were forwarded to Tines, enriched using AbuseIPDB and VirusTotal, and communicated through Slack. An analyst approval workflow was then implemented to allow or deny automated IP blocking through the Wazuh API.
+Extended Wazuh security monitoring with Tines SOAR through a custom webhook-based integration. Wazuh alerts were forwarded to Tines, enriched using AbuseIPDB and VirusTotal, communicated through Slack, and presented to an analyst approval workflow. Approved decisions triggered Wazuh API actions for automated IP containment.
 
 ## 🧰 Tools Used:
 - Wazuh SIEM
@@ -23,16 +23,14 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 - Wazuh Custom Rules
 
 ## 🛠️ Capabilities Demonstrated:
-- SOAR workflow design and orchestration
-- Security alert triage and enrichment
-- AI-assisted security analysis
-- Human-in-the-loop response design
-- Threat intelligence investigation
-- API-based security automation
-- Webhook-based integration
-- Incident response automation
-- Security decision-making and validation
-- Detection-to-response workflow development
+- **SOAR Workflow Design** – End-to-end security alert orchestration
+- **Alert Enrichment** – Automated IOC enrichment using AbuseIPDB and VirusTotal
+- **Threat Intelligence** – External reputation and indicator analysis
+- **Human-in-the-Loop Response** – Analyst approval before containment
+- **API Security Automation** – Wazuh API integration for response actions
+- **Webhook Integration** – Custom Wazuh-to-Tines event pipeline
+- **Incident Response Automation** – Automated notification, decision, and containment workflows
+- **Security Orchestration** – Coordination across Wazuh, Tines, threat intelligence, Slack, and response controls
 
 ## 📁 Key Deliverables:
 - Custom Tines-Wazuh integration
@@ -40,7 +38,7 @@ This project focused on extending Wazuh's security monitoring capabilities throu
 - Tines SOC automation workflow
 - AbuseIPDB and VirusTotal enrichment workflow
 - Slack notification workflow
-- AI Task Agent with structured IOC analysis
+- AI-assisted IOC analysis workflow with structured security findings
 - Analyst approval page with block/allow decision
 - Tines-Wazuh API connectivity
 - Automated Wazuh Active Response workflow
